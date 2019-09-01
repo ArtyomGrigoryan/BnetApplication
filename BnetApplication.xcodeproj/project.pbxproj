@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B796BAA23128AD500E00BCB /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B796BA923128AD500E00BCB /* Auth.storyboard */; };
+		2B796BAC2312C8CB00E00BCB /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B796BAB2312C8CB00E00BCB /* APIResponse.swift */; };
+		2B800C95230FB475008BCB26 /* CreateRecordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B800C8E230FB475008BCB26 /* CreateRecordPresenter.swift */; };
+		2B800C96230FB475008BCB26 /* CreateRecordWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B800C8F230FB475008BCB26 /* CreateRecordWorker.swift */; };
+		2B800C97230FB475008BCB26 /* CreateRecordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B800C90230FB475008BCB26 /* CreateRecordRouter.swift */; };
+		2B800C98230FB475008BCB26 /* CreateRecordModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B800C91230FB475008BCB26 /* CreateRecordModels.swift */; };
+		2B800C99230FB475008BCB26 /* CreateRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B800C92230FB475008BCB26 /* CreateRecordViewController.swift */; };
+		2B800C9A230FB475008BCB26 /* CreateRecordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B800C93230FB475008BCB26 /* CreateRecordInteractor.swift */; };
+		2B800CB223101300008BCB26 /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B800CAB23101300008BCB26 /* AuthPresenter.swift */; };
+		2B800CB323101300008BCB26 /* AuthWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B800CAC23101300008BCB26 /* AuthWorker.swift */; };
+		2B800CB423101300008BCB26 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B800CAD23101300008BCB26 /* AuthRouter.swift */; };
+		2B800CB523101300008BCB26 /* AuthModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B800CAE23101300008BCB26 /* AuthModels.swift */; };
+		2B800CB623101300008BCB26 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B800CAF23101300008BCB26 /* AuthViewController.swift */; };
+		2B800CB723101300008BCB26 /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B800CB023101300008BCB26 /* AuthInteractor.swift */; };
+		2BDFD35F231C356600D1505C /* ShowRecordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFD358231C356600D1505C /* ShowRecordPresenter.swift */; };
+		2BDFD361231C356600D1505C /* ShowRecordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFD35A231C356600D1505C /* ShowRecordRouter.swift */; };
+		2BDFD362231C356600D1505C /* ShowRecordModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFD35B231C356600D1505C /* ShowRecordModels.swift */; };
+		2BDFD363231C356600D1505C /* ShowRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFD35C231C356600D1505C /* ShowRecordViewController.swift */; };
+		2BDFD364231C356600D1505C /* ShowRecordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFD35D231C356600D1505C /* ShowRecordInteractor.swift */; };
+		2BEBDCC12301E26B007D7009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEBDCC02301E26B007D7009 /* AppDelegate.swift */; };
+		2BEBDCC62301E26B007D7009 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BEBDCC42301E26B007D7009 /* Main.storyboard */; };
+		2BEBDCC82301E26D007D7009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BEBDCC72301E26D007D7009 /* Assets.xcassets */; };
+		2BEBDCCB2301E26D007D7009 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BEBDCC92301E26D007D7009 /* LaunchScreen.storyboard */; };
+		2BEBDCD92301E2B3007D7009 /* RecordsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEBDCD22301E2B3007D7009 /* RecordsListPresenter.swift */; };
+		2BEBDCDA2301E2B3007D7009 /* RecordsListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEBDCD32301E2B3007D7009 /* RecordsListWorker.swift */; };
+		2BEBDCDB2301E2B3007D7009 /* RecordsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEBDCD42301E2B3007D7009 /* RecordsListRouter.swift */; };
+		2BEBDCDC2301E2B3007D7009 /* RecordsListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEBDCD52301E2B3007D7009 /* RecordsListModels.swift */; };
+		2BEBDCDD2301E2B3007D7009 /* RecordsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEBDCD62301E2B3007D7009 /* RecordsListViewController.swift */; };
+		2BEBDCDE2301E2B3007D7009 /* RecordsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEBDCD72301E2B3007D7009 /* RecordsListInteractor.swift */; };
+		2BEBDCE42301E557007D7009 /* RecordsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEBDCE32301E557007D7009 /* RecordsListTableViewCell.swift */; };
+		2BEBDCE82301E96B007D7009 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEBDCE72301E96B007D7009 /* ServerResponse.swift */; };
+		2BEBDCEA2301E9AA007D7009 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEBDCE92301E9AA007D7009 /* API.swift */; };
+		2BEBDCEC2301EBD9007D7009 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEBDCEB2301EBD9007D7009 /* NetworkService.swift */; };
+		2BEBDCEE2301ECA0007D7009 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEBDCED2301ECA0007D7009 /* NetworkDataFetcher.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2B796BA923128AD500E00BCB /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		2B796BAB2312C8CB00E00BCB /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		2B800C8E230FB475008BCB26 /* CreateRecordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRecordPresenter.swift; sourceTree = "<group>"; };
+		2B800C8F230FB475008BCB26 /* CreateRecordWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRecordWorker.swift; sourceTree = "<group>"; };
+		2B800C90230FB475008BCB26 /* CreateRecordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRecordRouter.swift; sourceTree = "<group>"; };
+		2B800C91230FB475008BCB26 /* CreateRecordModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRecordModels.swift; sourceTree = "<group>"; };
+		2B800C92230FB475008BCB26 /* CreateRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRecordViewController.swift; sourceTree = "<group>"; };
+		2B800C93230FB475008BCB26 /* CreateRecordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRecordInteractor.swift; sourceTree = "<group>"; };
+		2B800CAB23101300008BCB26 /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
+		2B800CAC23101300008BCB26 /* AuthWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWorker.swift; sourceTree = "<group>"; };
+		2B800CAD23101300008BCB26 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		2B800CAE23101300008BCB26 /* AuthModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModels.swift; sourceTree = "<group>"; };
+		2B800CAF23101300008BCB26 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		2B800CB023101300008BCB26 /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
+		2BDFD358231C356600D1505C /* ShowRecordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRecordPresenter.swift; sourceTree = "<group>"; };
+		2BDFD35A231C356600D1505C /* ShowRecordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRecordRouter.swift; sourceTree = "<group>"; };
+		2BDFD35B231C356600D1505C /* ShowRecordModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRecordModels.swift; sourceTree = "<group>"; };
+		2BDFD35C231C356600D1505C /* ShowRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRecordViewController.swift; sourceTree = "<group>"; };
+		2BDFD35D231C356600D1505C /* ShowRecordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRecordInteractor.swift; sourceTree = "<group>"; };
+		2BEBDCBD2301E26B007D7009 /* BnetApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BnetApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BEBDCC02301E26B007D7009 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2BEBDCC52301E26B007D7009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2BEBDCC72301E26D007D7009 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BEBDCCA2301E26D007D7009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2BEBDCCC2301E26D007D7009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BEBDCD22301E2B3007D7009 /* RecordsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListPresenter.swift; sourceTree = "<group>"; };
+		2BEBDCD32301E2B3007D7009 /* RecordsListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListWorker.swift; sourceTree = "<group>"; };
+		2BEBDCD42301E2B3007D7009 /* RecordsListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListRouter.swift; sourceTree = "<group>"; };
+		2BEBDCD52301E2B3007D7009 /* RecordsListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListModels.swift; sourceTree = "<group>"; };
+		2BEBDCD62301E2B3007D7009 /* RecordsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListViewController.swift; sourceTree = "<group>"; };
+		2BEBDCD72301E2B3007D7009 /* RecordsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListInteractor.swift; sourceTree = "<group>"; };
+		2BEBDCE32301E557007D7009 /* RecordsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListTableViewCell.swift; sourceTree = "<group>"; };
+		2BEBDCE72301E96B007D7009 /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
+		2BEBDCE92301E9AA007D7009 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		2BEBDCEB2301EBD9007D7009 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		2BEBDCED2301ECA0007D7009 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BEBDCBA2301E26B007D7009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B800C8D230FB442008BCB26 /* CreateRecord */ = {
+			isa = PBXGroup;
+			children = (
+				2B800C92230FB475008BCB26 /* CreateRecordViewController.swift */,
+				2B800C93230FB475008BCB26 /* CreateRecordInteractor.swift */,
+				2B800C8F230FB475008BCB26 /* CreateRecordWorker.swift */,
+				2B800C8E230FB475008BCB26 /* CreateRecordPresenter.swift */,
+				2B800C91230FB475008BCB26 /* CreateRecordModels.swift */,
+				2B800C90230FB475008BCB26 /* CreateRecordRouter.swift */,
+			);
+			path = CreateRecord;
+			sourceTree = "<group>";
+		};
+		2B800CBA23101316008BCB26 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2B800CAF23101300008BCB26 /* AuthViewController.swift */,
+				2B800CB023101300008BCB26 /* AuthInteractor.swift */,
+				2B800CAC23101300008BCB26 /* AuthWorker.swift */,
+				2B800CAB23101300008BCB26 /* AuthPresenter.swift */,
+				2B800CAE23101300008BCB26 /* AuthModels.swift */,
+				2B800CAD23101300008BCB26 /* AuthRouter.swift */,
+				2B796BA923128AD500E00BCB /* Auth.storyboard */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		2B800CBB231034D0008BCB26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2BDFD357231C34EB00D1505C /* ShowRecord */ = {
+			isa = PBXGroup;
+			children = (
+				2BDFD35C231C356600D1505C /* ShowRecordViewController.swift */,
+				2BDFD35D231C356600D1505C /* ShowRecordInteractor.swift */,
+				2BDFD358231C356600D1505C /* ShowRecordPresenter.swift */,
+				2BDFD35A231C356600D1505C /* ShowRecordRouter.swift */,
+				2BDFD35B231C356600D1505C /* ShowRecordModels.swift */,
+			);
+			path = ShowRecord;
+			sourceTree = "<group>";
+		};
+		2BEBDCB42301E26B007D7009 = {
+			isa = PBXGroup;
+			children = (
+				2BEBDCBF2301E26B007D7009 /* BnetApplication */,
+				2BEBDCBE2301E26B007D7009 /* Products */,
+				2B800CBB231034D0008BCB26 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2BEBDCBE2301E26B007D7009 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BEBDCBD2301E26B007D7009 /* BnetApplication.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BEBDCBF2301E26B007D7009 /* BnetApplication */ = {
+			isa = PBXGroup;
+			children = (
+				2BEBDCE52301E957007D7009 /* Services */,
+				2BEBDCE12301E2C7007D7009 /* Scenes */,
+				2BEBDCC02301E26B007D7009 /* AppDelegate.swift */,
+				2BEBDCC42301E26B007D7009 /* Main.storyboard */,
+				2BEBDCC72301E26D007D7009 /* Assets.xcassets */,
+				2BEBDCC92301E26D007D7009 /* LaunchScreen.storyboard */,
+				2BEBDCCC2301E26D007D7009 /* Info.plist */,
+			);
+			path = BnetApplication;
+			sourceTree = "<group>";
+		};
+		2BEBDCE02301E2BB007D7009 /* RecordsList */ = {
+			isa = PBXGroup;
+			children = (
+				2BEBDCE22301E53F007D7009 /* Cell */,
+				2BEBDCD62301E2B3007D7009 /* RecordsListViewController.swift */,
+				2BEBDCD72301E2B3007D7009 /* RecordsListInteractor.swift */,
+				2BEBDCD32301E2B3007D7009 /* RecordsListWorker.swift */,
+				2BEBDCD22301E2B3007D7009 /* RecordsListPresenter.swift */,
+				2BEBDCD52301E2B3007D7009 /* RecordsListModels.swift */,
+				2BEBDCD42301E2B3007D7009 /* RecordsListRouter.swift */,
+			);
+			path = RecordsList;
+			sourceTree = "<group>";
+		};
+		2BEBDCE12301E2C7007D7009 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2B800CBA23101316008BCB26 /* Auth */,
+				2BEBDCE02301E2BB007D7009 /* RecordsList */,
+				2B800C8D230FB442008BCB26 /* CreateRecord */,
+				2BDFD357231C34EB00D1505C /* ShowRecord */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2BEBDCE22301E53F007D7009 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2BEBDCE32301E557007D7009 /* RecordsListTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2BEBDCE52301E957007D7009 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2BEBDCE62301E95E007D7009 /* Models */,
+				2BEBDCE92301E9AA007D7009 /* API.swift */,
+				2B796BAB2312C8CB00E00BCB /* APIResponse.swift */,
+				2BEBDCEB2301EBD9007D7009 /* NetworkService.swift */,
+				2BEBDCED2301ECA0007D7009 /* NetworkDataFetcher.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2BEBDCE62301E95E007D7009 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2BEBDCE72301E96B007D7009 /* ServerResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BEBDCBC2301E26B007D7009 /* BnetApplication */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BEBDCCF2301E26D007D7009 /* Build configuration list for PBXNativeTarget "BnetApplication" */;
+			buildPhases = (
+				2BEBDCB92301E26B007D7009 /* Sources */,
+				2BEBDCBA2301E26B007D7009 /* Frameworks */,
+				2BEBDCBB2301E26B007D7009 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BnetApplication;
+			productName = BnetApplication;
+			productReference = 2BEBDCBD2301E26B007D7009 /* BnetApplication.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BEBDCB52301E26B007D7009 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Artyom Grigoryan";
+				TargetAttributes = {
+					2BEBDCBC2301E26B007D7009 = {
+						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.HotspotConfiguration = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 2BEBDCB82301E26B007D7009 /* Build configuration list for PBXProject "BnetApplication" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BEBDCB42301E26B007D7009;
+			productRefGroup = 2BEBDCBE2301E26B007D7009 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BEBDCBC2301E26B007D7009 /* BnetApplication */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BEBDCBB2301E26B007D7009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B796BAA23128AD500E00BCB /* Auth.storyboard in Resources */,
+				2BEBDCCB2301E26D007D7009 /* LaunchScreen.storyboard in Resources */,
+				2BEBDCC82301E26D007D7009 /* Assets.xcassets in Resources */,
+				2BEBDCC62301E26B007D7009 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BEBDCB92301E26B007D7009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BDFD35F231C356600D1505C /* ShowRecordPresenter.swift in Sources */,
+				2B800C95230FB475008BCB26 /* CreateRecordPresenter.swift in Sources */,
+				2B800CB223101300008BCB26 /* AuthPresenter.swift in Sources */,
+				2BEBDCEE2301ECA0007D7009 /* NetworkDataFetcher.swift in Sources */,
+				2BDFD363231C356600D1505C /* ShowRecordViewController.swift in Sources */,
+				2BEBDCEC2301EBD9007D7009 /* NetworkService.swift in Sources */,
+				2B800C97230FB475008BCB26 /* CreateRecordRouter.swift in Sources */,
+				2BDFD361231C356600D1505C /* ShowRecordRouter.swift in Sources */,
+				2BEBDCC12301E26B007D7009 /* AppDelegate.swift in Sources */,
+				2BEBDCDB2301E2B3007D7009 /* RecordsListRouter.swift in Sources */,
+				2B796BAC2312C8CB00E00BCB /* APIResponse.swift in Sources */,
+				2B800CB423101300008BCB26 /* AuthRouter.swift in Sources */,
+				2BEBDCE42301E557007D7009 /* RecordsListTableViewCell.swift in Sources */,
+				2BEBDCDA2301E2B3007D7009 /* RecordsListWorker.swift in Sources */,
+				2BEBDCEA2301E9AA007D7009 /* API.swift in Sources */,
+				2B800C96230FB475008BCB26 /* CreateRecordWorker.swift in Sources */,
+				2B800C98230FB475008BCB26 /* CreateRecordModels.swift in Sources */,
+				2BEBDCE82301E96B007D7009 /* ServerResponse.swift in Sources */,
+				2BEBDCDD2301E2B3007D7009 /* RecordsListViewController.swift in Sources */,
+				2B800C9A230FB475008BCB26 /* CreateRecordInteractor.swift in Sources */,
+				2B800CB623101300008BCB26 /* AuthViewController.swift in Sources */,
+				2B800CB323101300008BCB26 /* AuthWorker.swift in Sources */,
+				2BEBDCDE2301E2B3007D7009 /* RecordsListInteractor.swift in Sources */,
+				2B800C99230FB475008BCB26 /* CreateRecordViewController.swift in Sources */,
+				2B800CB723101300008BCB26 /* AuthInteractor.swift in Sources */,
+				2B800CB523101300008BCB26 /* AuthModels.swift in Sources */,
+				2BDFD364231C356600D1505C /* ShowRecordInteractor.swift in Sources */,
+				2BEBDCD92301E2B3007D7009 /* RecordsListPresenter.swift in Sources */,
+				2BDFD362231C356600D1505C /* ShowRecordModels.swift in Sources */,
+				2BEBDCDC2301E2B3007D7009 /* RecordsListModels.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2BEBDCC42301E26B007D7009 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BEBDCC52301E26B007D7009 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2BEBDCC92301E26D007D7009 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BEBDCCA2301E26D007D7009 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BEBDCCD2301E26D007D7009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2BEBDCCE2301E26D007D7009 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BEBDCD02301E26D007D7009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QMVZ37K9BV;
+				INFOPLIST_FILE = BnetApplication/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ArtyomGrigoryan.BnetApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2BEBDCD12301E26D007D7009 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QMVZ37K9BV;
+				INFOPLIST_FILE = BnetApplication/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ArtyomGrigoryan.BnetApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BEBDCB82301E26B007D7009 /* Build configuration list for PBXProject "BnetApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BEBDCCD2301E26D007D7009 /* Debug */,
+				2BEBDCCE2301E26D007D7009 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BEBDCCF2301E26D007D7009 /* Build configuration list for PBXNativeTarget "BnetApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BEBDCD02301E26D007D7009 /* Debug */,
+				2BEBDCD12301E26D007D7009 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BEBDCB52301E26B007D7009 /* Project object */;
+}
