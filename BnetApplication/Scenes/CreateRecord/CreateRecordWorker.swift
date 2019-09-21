@@ -10,12 +10,10 @@ import UIKit
 
 class CreateRecordService {
     private var response: ServerResponse?
-    private var networking: Networking
-    private var fetcher: DataFetcher
+    private var fetcherService: DataFetcherService!
     
     init() {
-        networking = NetworkService()
-        fetcher = NetworkDataFetcher(networking: networking)
+        fetcherService = DataFetcherService()
     }
     
     func createNewRecord(session: String, userText: String, completion: @escaping (Response<Any?>) -> Void) {
@@ -23,7 +21,7 @@ class CreateRecordService {
             let emptyTextAreaErrorMessage = "Пожалуйста, напишите что-нибудь в текстовое поле."
             completion(.failure(emptyTextAreaErrorMessage))
         } else {
-            fetcher.createNewRecord(session: session, userText: userText) { (response, error) in
+            fetcherService.createNewRecord(session: session, userText: userText) { (response, error) in
                 // Отсутствует интернет-соединение.
                 if let error = error {
                     completion(.failure(error.localizedDescription))

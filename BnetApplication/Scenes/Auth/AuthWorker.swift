@@ -10,16 +10,14 @@ import UIKit
 
 class AuthService {
     private var response: ServerResponse?
-    private var networking: Networking
-    private var fetcher: DataFetcher
+    private var fetcherService: DataFetcherService!
     
     init() {
-        networking = NetworkService()
-        fetcher = NetworkDataFetcher(networking: networking)
+        fetcherService = DataFetcherService()
     }
     
     func getSession(completion: @escaping (Response<ResponseData>) -> Void) {
-        fetcher.getSession { (response, error) in
+        fetcherService.getSession { (response, error) in
             // Отсутствует интернет-соединение.
             if let error = error {
                 completion(.failure(error.localizedDescription))

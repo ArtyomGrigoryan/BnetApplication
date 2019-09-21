@@ -13,17 +13,15 @@
 import UIKit
 
 class RecordsListService {
-    private var networking: Networking
-    private var fetcher: DataFetcher
     private var records: [ResponseData2]?
+    private var fetcherService: DataFetcherService!
     
     init() {
-        networking = NetworkService()
-        fetcher = NetworkDataFetcher(networking: networking)
+        fetcherService = DataFetcherService()
     }
     
     func getRecords(session: String, completion: @escaping (Response<[ResponseData2]>) -> Void) {
-        fetcher.getRecords(session: session) { [weak self] (response, error) in
+        fetcherService.getRecords(session: session) { [weak self] (response, error) in
             // Отсутствует интернет-соединение.
             if let error = error {
                 completion(.failure(error.localizedDescription))

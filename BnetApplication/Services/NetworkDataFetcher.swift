@@ -9,53 +9,22 @@
 import Foundation
 
 protocol DataFetcher {
-    func getSession(response: @escaping (ServerResponse?, Error?) -> Void)
-    func getRecords(session: String, response: @escaping (ServerResponse2?, Error?) -> Void)
-    func createNewRecord(session: String, userText: String, response: @escaping (ServerResponse?, Error?) -> Void)
+    func fetchJSONData<T: Decodable>(params: [String: String], response: @escaping (T?, Error?) -> Void)
 }
 
 struct NetworkDataFetcher: DataFetcher {
     let networking: Networking
     
-    init(networking: Networking) {
+    init(networking: Networking = NetworkService()) {
         self.networking = networking
     }
     
-    func getSession(response: @escaping (ServerResponse?, Error?) -> Void) {
-        let parameters = ["a": API.newSession]
-       
-        networking.request(params: parameters) { (data, error) in
+    func fetchJSONData<T: Decodable>(params: [String: String], response: @escaping (T?, Error?) -> Void) {
+        networking.request(params: params) { (data, error) in
             guard let data = data else {
                 return response(nil, error)
             }
-            let decoded = self.decodeJSON(type: ServerResponse.self, from: data)
-            response(decoded, nil)
-        }
-    }
-    
-    func createNewRecord(session: String, userText: String, response: @escaping (ServerResponse?, Error?) -> Void) {
-        let parameters = ["session": session,
-                          "body"   : userText,
-                          "a"      : API.addEntry]
-        
-        networking.request(params: parameters) { (data, error) in
-            guard let data = data else {
-                return response(nil, error)
-            }
-            let decoded = self.decodeJSON(type: ServerResponse.self, from: data)
-            response(decoded, nil)
-        }
-    }
-    
-    func getRecords(session: String, response: @escaping (ServerResponse2?, Error?) -> Void) {
-        let parameters = ["session": session,
-                          "a"      : API.getEntries]
-        
-        networking.request(params: parameters) { (data, error) in
-            guard let data = data else {
-                return response(nil, error)
-            }
-            let decoded = self.decodeJSON(type: ServerResponse2.self, from: data)
+            let decoded = self.decodeJSON(type: T.self, from: data)
             response(decoded, nil)
         }
     }

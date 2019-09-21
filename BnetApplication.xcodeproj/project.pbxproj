@@ -41,6 +41,7 @@
 		2BEBDCEA2301E9AA007D7009 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEBDCE92301E9AA007D7009 /* API.swift */; };
 		2BEBDCEC2301EBD9007D7009 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEBDCEB2301EBD9007D7009 /* NetworkService.swift */; };
 		2BEBDCEE2301ECA0007D7009 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEBDCED2301ECA0007D7009 /* NetworkDataFetcher.swift */; };
+		2BF9810D23367FB400982C45 /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF9810C23367FB400982C45 /* DataFetcherService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		2BEBDCE92301E9AA007D7009 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		2BEBDCEB2301EBD9007D7009 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		2BEBDCED2301ECA0007D7009 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		2BF9810C23367FB400982C45 /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 				2B796BAB2312C8CB00E00BCB /* APIResponse.swift */,
 				2BEBDCEB2301EBD9007D7009 /* NetworkService.swift */,
 				2BEBDCED2301ECA0007D7009 /* NetworkDataFetcher.swift */,
+				2BF9810C23367FB400982C45 /* DataFetcherService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				2BEBDCE82301E96B007D7009 /* ServerResponse.swift in Sources */,
 				2BEBDCDD2301E2B3007D7009 /* RecordsListViewController.swift in Sources */,
 				2B800C9A230FB475008BCB26 /* CreateRecordInteractor.swift in Sources */,
+				2BF9810D23367FB400982C45 /* DataFetcherService.swift in Sources */,
 				2B800CB623101300008BCB26 /* AuthViewController.swift in Sources */,
 				2B800CB323101300008BCB26 /* AuthWorker.swift in Sources */,
 				2BEBDCDE2301E2B3007D7009 /* RecordsListInteractor.swift in Sources */,
