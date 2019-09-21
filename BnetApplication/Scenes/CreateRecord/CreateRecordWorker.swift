@@ -24,10 +24,16 @@ class CreateRecordService {
             completion(.failure(emptyTextAreaErrorMessage))
         } else {
             fetcher.createNewRecord(session: session, userText: userText) { (response, error) in
-                guard ((response?.data) != nil) else {
-                    return completion(.failure(error!.localizedDescription))
+                // Отсутствует интернет-соединение.
+                if let error = error {
+                    completion(.failure(error.localizedDescription))
+                // Другая ошибка, указанная в разделе "Примеры ошибок" на сайте https://bnet.i-partner.ru/testAPI/
+                } else if response?.status == 0 {
+                    completion(.failure(response!.error!))
+                // Отсутствие ошибок.
+                } else {
+                    completion(.success(nil))
                 }
-                completion(.success(nil))
             }
         }
     }

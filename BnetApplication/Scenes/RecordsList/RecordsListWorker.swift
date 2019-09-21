@@ -24,11 +24,18 @@ class RecordsListService {
     
     func getRecords(session: String, completion: @escaping (Response<[ResponseData2]>) -> Void) {
         fetcher.getRecords(session: session) { [weak self] (response, error) in
-            guard let self = self, let records = response?.data else {
-                return completion(.failure(error!.localizedDescription))
+            // Отсутствует интернет-соединение.
+            if let error = error {
+                completion(.failure(error.localizedDescription))
+            // Другая ошибка, указанная в разделе "Примеры ошибок" на сайте https://bnet.i-partner.ru/testAPI/
+            } else if response?.status == 0 {
+                completion(.failure(response!.error!))
+            // Отсутствие ошибок.
+            } else {
+                guard let self = self, let records = response?.data else { return }
+                self.records = records.first
+                completion(.success(self.records!))
             }
-            self.records = records.first
-            completion(.success(self.records!))
         }
     }
 }
