@@ -18,6 +18,7 @@ enum RecordsList {
     
         struct Response {
             enum ResponseType {
+                case presentLoader
                 case presentError(error: String)
                 case presentResponseData(records: [ResponseData2])
             }
@@ -25,6 +26,7 @@ enum RecordsList {
  
         struct ViewModel {
             enum ViewModelData {
+                case displayLoader
                 case displayError(error: String)
                 case displayRecords(viewModel: RecordsViewModel)
             }

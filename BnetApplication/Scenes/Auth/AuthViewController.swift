@@ -49,7 +49,6 @@ class AuthViewController: UIViewController, AuthDisplayLogic {
     private func setupUI() {
         loadingView.clipsToBounds = true
         loadingView.layer.cornerRadius = 10
-        showActivityIndicator()
     }
   
     // MARK: - View lifecycle
@@ -61,12 +60,15 @@ class AuthViewController: UIViewController, AuthDisplayLogic {
     }
   
     func displayData(viewModel: Auth.Model.ViewModel.ViewModelData) {
-        hideActivityIndicator()
         switch viewModel {
         case .success:
+            hideActivityIndicator()
             router?.routeToRecordsList(segue: nil)
         case .presentFailure(let errorTitle):
+            hideActivityIndicator()
             errorAlert(with: errorTitle)
+        case .displayLoader:
+            showActivityIndicator()
         }
     }
   
@@ -77,7 +79,6 @@ class AuthViewController: UIViewController, AuthDisplayLogic {
         let closeAction = UIAlertAction(title: "Закрыть", style: .cancel)
         let tryAgainAction = UIAlertAction(title: "Повторить", style: .default) { [weak self] (_) in
             guard let self = self, let interactor = self.interactor else { return }
-            self.showActivityIndicator()
             interactor.makeRequest(request: .getSession)
         }
         

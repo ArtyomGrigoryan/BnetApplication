@@ -33,6 +33,7 @@ class AuthInteractor: AuthBusinessLogic, AuthDataStore {
         
         switch request {
         case .getSession:
+            presenter?.presentData(response: .presentLoader)
             service?.getSession { [weak self] (response) in
                 switch response {
                 case .success(let data):

@@ -70,19 +70,22 @@ class CreateRecordViewController: UIViewController, CreateRecordDisplayLogic {
     }
   
     func displayData(viewModel: CreateRecord.Model.ViewModel.ViewModelData) {
-        hideActivityIndicator()
         switch viewModel {
         case .success:
+            hideActivityIndicator()
             performSegue(withIdentifier: "RecordsList", sender: nil)
-        case .presentFailure(let error):
+        case .displayFailure(let error):
+            hideActivityIndicator()
             errorAlert(with: error)
+        case .displayLoader:
+            showActivityIndicator()
         }
     }
     
     // MARK: - @IBActions
     
     @IBAction func createRecordBarButtonItemPressed(_ sender: UIBarButtonItem) {
-        showActivityIndicator()
+        //showActivityIndicator()
         let userText = textArea.text!
         interactor?.makeRequest(request: .passUserText(userText: userText))
     }
@@ -91,7 +94,7 @@ class CreateRecordViewController: UIViewController, CreateRecordDisplayLogic {
         dismiss(animated: true)
     }
     
-    // MARK: - Helpers
+    // MARK: - UI
     
     func errorAlert(with title: String) {
         let alertController = UIAlertController(title: title, message: "Повторите попытку.", preferredStyle: .alert)

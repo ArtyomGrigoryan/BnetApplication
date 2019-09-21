@@ -25,7 +25,9 @@ class CreateRecordPresenter: CreateRecordPresentationLogic {
         case .success:
             viewController?.displayData(viewModel: .success)
         case .failure(let error):
-            viewController?.displayData(viewModel: .presentFailure(error: error))
+            viewController?.displayData(viewModel: .displayFailure(error: error))
+        case .presentLoader:
+            viewController?.displayData(viewModel: .displayLoader)
         }
     }
 }

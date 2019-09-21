@@ -35,6 +35,7 @@ class CreateRecordInteractor: CreateRecordBusinessLogic, CreateRecordDataStore {
         
         switch request {
         case .passUserText(let userText):
+            presenter?.presentData(response: .presentLoader)
             service.createNewRecord(session: session, userText: userText) { [weak self] (dataResponse) in
                 switch dataResponse {
                 case .success:

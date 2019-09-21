@@ -20,13 +20,15 @@ enum CreateRecord {
             enum ResponseType {
                 case success
                 case failure(error: String)
+                case presentLoader
             }
         }
    
         struct ViewModel {
             enum ViewModelData {
                 case success
-                case presentFailure(error: String)
+                case displayFailure(error: String)
+                case displayLoader
             }
         }
     }

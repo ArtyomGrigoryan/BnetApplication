@@ -20,6 +20,7 @@ enum Auth {
             enum ResponseType {
                 case success
                 case failure(error: String)
+                case presentLoader
             }
         }
    
@@ -27,6 +28,7 @@ enum Auth {
             enum ViewModelData {
                 case success
                 case presentFailure(errorTitle: String)
+                case displayLoader
             }
         }
     }

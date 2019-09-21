@@ -67,20 +67,22 @@ class RecordsListViewController: UITableViewController, RecordsListDisplayLogic 
     }
   
     func displayData(viewModel: RecordsList.Model.ViewModel.ViewModelData) {
-        hideActivityIndicator()
         switch viewModel {
         case .displayRecords(let viewModel):
+            hideActivityIndicator()
             recordsViewModel = viewModel
             tableView.reloadData()
         case .displayError(let error):
+            hideActivityIndicator()
             errorAlert(with: error)
+        case .displayLoader:
+            showActivityIndicator()
         }
     }
     
     // MARK: - @IBActions
     
     @IBAction func unwind(segue: UIStoryboardSegue) {
-        showActivityIndicator()
         interactor?.makeRequest(request: .getRecords)
     }
     

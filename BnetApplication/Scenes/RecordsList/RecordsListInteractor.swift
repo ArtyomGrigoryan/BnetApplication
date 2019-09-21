@@ -37,6 +37,7 @@ class RecordsListInteractor: RecordsListBusinessLogic, RecordsListDataStore {
         
         switch request {
         case .getRecords:
+            presenter?.presentData(response: .presentLoader)
             service?.getRecords(session: session) { [weak self] (dataResponse) in
                 switch dataResponse {
                 case .success(let response):

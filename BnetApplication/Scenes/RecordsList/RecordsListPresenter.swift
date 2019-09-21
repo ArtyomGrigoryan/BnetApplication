@@ -30,6 +30,8 @@ class RecordsListPresenter: RecordsListPresentationLogic {
             viewController?.displayData(viewModel: .displayRecords(viewModel: recordsViewModel))
         case .presentError(let error):
             viewController?.displayData(viewModel: .displayError(error: error))
+        case .presentLoader:
+            viewController?.displayData(viewModel: .displayLoader)
         }
     }
     
