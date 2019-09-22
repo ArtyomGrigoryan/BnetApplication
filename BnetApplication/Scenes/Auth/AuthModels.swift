@@ -27,7 +27,7 @@ enum Auth {
         struct ViewModel {
             enum ViewModelData {
                 case success
-                case presentFailure(errorTitle: String)
+                case displayFailure(errorTitle: String)
                 case displayLoader
             }
         }

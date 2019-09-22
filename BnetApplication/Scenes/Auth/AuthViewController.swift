@@ -64,7 +64,7 @@ class AuthViewController: UIViewController, AuthDisplayLogic {
         case .success:
             hideActivityIndicator()
             router?.routeToRecordsList(segue: nil)
-        case .presentFailure(let errorTitle):
+        case .displayFailure(let errorTitle):
             hideActivityIndicator()
             errorAlert(with: errorTitle)
         case .displayLoader:

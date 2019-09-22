@@ -22,24 +22,24 @@ class RecordsListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        //так как изначально дата создания совпадает с датой модификации, то дата модификации показана не будет
+        // Так как изначально дата создания совпадает с датой модификации, то дата модификации показана не будет.
         dateOfModificationTextLabel.isHidden = true
-        //скрываем как текст "Дата модификации" так и само значение даты модификации
+        // Скрываем как текст "Дата модификации" так и само значение даты модификации.
         dmLabel.isHidden = true
     }
 
     func configureCell(viewModel: RecordsListCellViewModel) {
-        //заполним лейбл с текстом, который пользователь ввёл на экране CreateRecord
+        // Заполним лейбл с текстом, который пользователь ввёл на экране CreateRecord.
         bodyLabel.text = viewModel.body
-        //заполним лейбл с датой создания вышеупомянутого текста
+        // Заполним лейбл с датой создания вышеупомянутого текста.
         daLabel.text = getStringFromDate(date: viewModel.da)
-        //если дата создания не совпадает с датой модификации, то
+        // Если дата создания не совпадает с датой модификации, то
         if viewModel.da != viewModel.dm {
-            //покажем лейбл с датой модификации
+            // покажем лейбл с датой модификации,
             dmLabel.isHidden = false
-            //покажем лейбл "Дата модификации"
+            // покажем лейбл "Дата модификации",
             dateOfModificationTextLabel.isHidden = false
-            //установим значение в лейбл с датой модификации
+            // установим значение в лейбл с датой модификации.
             dmLabel.text = getStringFromDate(date: viewModel.dm)
         }
     }

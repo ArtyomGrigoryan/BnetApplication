@@ -31,12 +31,12 @@ class CreateRecordInteractor: CreateRecordBusinessLogic, CreateRecordDataStore {
             service = CreateRecordService()
         }
 
-        guard let service = service, let session = session else { return }
+        guard let session = session else { return }
         
         switch request {
         case .passUserText(let userText):
             presenter?.presentData(response: .presentLoader)
-            service.createNewRecord(session: session, userText: userText) { [weak self] (dataResponse) in
+            service?.createNewRecord(session: session, userText: userText) { [weak self] (dataResponse) in
                 switch dataResponse {
                 case .success:
                     self?.presenter?.presentData(response: .success)

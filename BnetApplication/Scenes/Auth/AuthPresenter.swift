@@ -25,7 +25,7 @@ class AuthPresenter: AuthPresentationLogic {
         case .success:
             viewController?.displayData(viewModel: .success)
         case .failure(let error):
-            viewController?.displayData(viewModel: .presentFailure(errorTitle: error))
+            viewController?.displayData(viewModel: .displayFailure(errorTitle: error))
         case .presentLoader:
             viewController?.displayData(viewModel: .displayLoader)
         }

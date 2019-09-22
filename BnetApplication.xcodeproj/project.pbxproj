@@ -135,8 +135,8 @@
 				2BDFD35C231C356600D1505C /* ShowRecordViewController.swift */,
 				2BDFD35D231C356600D1505C /* ShowRecordInteractor.swift */,
 				2BDFD358231C356600D1505C /* ShowRecordPresenter.swift */,
-				2BDFD35A231C356600D1505C /* ShowRecordRouter.swift */,
 				2BDFD35B231C356600D1505C /* ShowRecordModels.swift */,
+				2BDFD35A231C356600D1505C /* ShowRecordRouter.swift */,
 			);
 			path = ShowRecord;
 			sourceTree = "<group>";
