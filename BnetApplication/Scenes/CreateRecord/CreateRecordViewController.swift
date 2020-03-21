@@ -85,7 +85,6 @@ class CreateRecordViewController: UIViewController, CreateRecordDisplayLogic {
     // MARK: - @IBActions
     
     @IBAction func createRecordBarButtonItemPressed(_ sender: UIBarButtonItem) {
-        //showActivityIndicator()
         let userText = textArea.text!
         interactor?.makeRequest(request: .passUserText(userText: userText))
     }

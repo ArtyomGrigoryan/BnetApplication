@@ -29,6 +29,7 @@ class AuthRouter: NSObject, AuthRoutingLogic, AuthDataPassing  {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "RecordsListViewController") as! RecordsListViewController
         let destinationNavigationVC = UINavigationController(rootViewController: vc)
+        destinationNavigationVC.modalPresentationStyle = .fullScreen
         var destinationDS = vc.router!.dataStore!
         passDataToRecordsList(source: self.dataStore!, destination: &destinationDS)
         navigateToRecordsList(source: self.viewController!, destination: destinationNavigationVC)
